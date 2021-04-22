@@ -1,0 +1,6 @@
+Requirements 
+1. Must have node.js installed
+
+Setup 
+1. Run setup.bat and wait for it to be done
+2. Now run startup.bat and you should be able to delete setup.bat

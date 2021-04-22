@@ -1,0 +1,13 @@
+{
+    "main": {
+    "token": "go to https://discord.com/developers/applications/ to get your token"
+    },
+    "no_ping": {
+    "user(s)id(s)": ["example: 336313093736890388"]
+    },
+    "filter": {
+        "disablediscordlinks": "must be true or false",
+        "disabled_words": ["example1","example2", "example3", "example4"]
+    }
+   
+}
