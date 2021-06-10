@@ -1,0 +1,22 @@
+{
+    "main": {
+    "token": "go to https://discord.com/developers/applications to get your token"
+    },
+
+    "embeds": {
+        "color": "4287f5",
+        "footer message": "Filter"
+    },
+
+    "filter": {
+        "enabled":  true,
+        "disabledwords": ["example1", "example2"],
+        "disablediscordlinks": true 
+    },
+
+    "no ping": {
+    "enabled": true,
+    "user ids(if enabled)": ["example: 336313093736890388"],
+    "image url": "example: https://popcornsdevelopments.com/images/logo.gif"
+    }   
+}
