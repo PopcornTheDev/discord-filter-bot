@@ -2,26 +2,20 @@ const config = require('../config.json');
 const Discord = require('discord.js');
 exports.run = async (client, message) => {
     if (config.filter.enabled === true) {
-        main.query(`SELECT * FROM staff_members WHERE user_id = "${message.author.id}"`, async function (err, result) {
-            if (!result[0]) {
-                config.filter.disabledwords.forEach(eachWord => {
-                    if (message.content.toLowerCase().search(eachWord.toLowerCase()) >= 0) {
-                        message.delete().catch();
-                        const help = new Discord.MessageEmbed().setDescription(`You are not allowed to say that in this guild `).setTimestamp().setFooter(config.embeds["footer message"] || "Server Filter", `${message.author.avatarURL()}`).setColor(config.embeds.color);
-                        message.channel.send(help).then((messagess) => {
-                            setTimeout(function () {
-                                messagess.delete().catch();
-                            }, 10000);
-                        });
-                        message.author.send(help).catch();
-                    }
+        config.filter.disabledwords.forEach(eachWord => {
+            if (message.content.toLowerCase().search(eachWord.toLowerCase()) >= 0) {
+                message.delete().catch();
+                const help = new Discord.MessageEmbed().setDescription(`You are not allowed to say that in this guild `).setTimestamp().setFooter(config.embeds["footer message"] || "Server Filter", `${message.author.avatarURL()}`).setColor(config.embeds.color);
+                message.channel.send(help).then((messagess) => {
+                    setTimeout(function () {
+                        messagess.delete().catch();
+                    }, 10000);
                 });
+                message.author.send(help).catch();
             }
         });
     }
-
     if (config.filter.disablediscordlinks === true) {
-
         const help = ["discord.gg", "discord.com/invite/"];
         help.forEach(eachWord => {
             if (message.content.toLowerCase().search(eachWord.toLowerCase()) >= 0) {
@@ -34,9 +28,7 @@ exports.run = async (client, message) => {
                 });
                 message.author.send(help).catch();
 
-
             }
-
         });
     }
     if (config['no ping'].enabled === true) {
@@ -56,11 +48,7 @@ exports.run = async (client, message) => {
                     }, 10000);
                 });
                 message.author.send(help).catch();
-
             }
-
         });
-
     }
-
 }
