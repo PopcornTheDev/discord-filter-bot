@@ -6,8 +6,6 @@ const client = new Discord.Client();
 client.aliases = new Discord.Collection();
 client.events = new Discord.Collection();
 
-
-
 fs.readdir('./events/', (err, files) => {
     if (err) console.log(err);
     files.forEach(file => {
@@ -17,9 +15,5 @@ fs.readdir('./events/', (err, files) => {
         client.on(eventName, (...args) => eventFunc.run(client, ...args));
     });
 });
-
-
-
-
 
 client.login(config.main.token)
