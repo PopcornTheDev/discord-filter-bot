@@ -1,7 +1,7 @@
 {
-  "name": "filter-bot",
+  "name": "no-ping-bot",
   "version": "1.0.0",
-  "description": "A filter bot for discord",
+  "description": "A No Ping bot for discord",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
