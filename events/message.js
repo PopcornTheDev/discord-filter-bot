@@ -16,7 +16,7 @@ exports.run = async(client, message) => {
         });
     }
 
-    if (config.disablediscordlinks === true) {
+    if (config.filter.disablediscordlinks === true) {
         const help = ["discord.gg", "discord.com/invite/"];
         if (help.some((messageword) => message.content.toLowerCase().includes(messageword))) {
             message.delete().catch();
