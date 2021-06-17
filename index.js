@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 const config = require('./config.json');
 const client = new Discord.Client();
 
-client.aliases = new Discord.Collection();
 client.events = new Discord.Collection();
 
 fs.readdir('./events/', (err, files) => {
