@@ -1,22 +1,13 @@
 {
     "main": {
-    "token": "go to https://discord.com/developers/applications to get your token"
+    "token": "go to https://discord.com/developers/applications/ to get your token"
     },
-
-    "embeds": {
-        "color": "4287f5",
-        "footer message": "Filter"
+    "no_ping": {
+    "user(s)id(s)": ["example: 336313093736890388"]
     },
-
     "filter": {
-        "enabled":  true,
-        "disabledwords": ["example1", "example2"],
-        "disablediscordlinks": true 
-    },
-
-    "no ping": {
-    "enabled": true,
-    "user ids(if enabled)": ["example: 336313093736890388"],
-    "image url": "example: https://popcornsdevelopments.com/images/logo.gif"
-    }   
+        "disablediscordlinks": "must be true or false",
+        "disabled_words": ["example1","example2", "example3", "example4"]
+    }
+   
 }
