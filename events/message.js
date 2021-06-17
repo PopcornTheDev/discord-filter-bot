@@ -3,8 +3,7 @@ const Discord = require('discord.js');
 exports.run = async(client, message) => {
     if (config.filter.enabled === true){
         if (config.filter.disabledwords.some((messageword) => message.content.toLowerCase().includes(messageword))) {
-
-            message.delete();
+            message.delete().catch();
             const help = new Discord.MessageEmbed().setDescription(`You are not allowed to say that in this guild `).setTimestamp().setFooter(config.embeds["footer message"] || "Server Filter", `${message.author.avatarURL()}`).setColor(config.embeds.color);
             message.channel.send(help).then((messagess) => {
                 setTimeout(function () {
@@ -12,11 +11,7 @@ exports.run = async(client, message) => {
                 }, 10000);
             });
             message.author.send(help);
-                }else {
-
-                }
-    }else {
-
+        }
     }
 
     if (config.disablediscordlinks === true) {
@@ -31,8 +26,6 @@ exports.run = async(client, message) => {
             });
             message.author.send(help);
         }
-    } else {
-    
     }
     if(config['no ping'].enabled === true){
         const help = config['no ping']['user ids(if enabled)']
@@ -50,8 +43,6 @@ exports.run = async(client, message) => {
             });
             message.author.send(help);
         }
-    }else {
-        
     }
 };
 
