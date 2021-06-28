@@ -1,9 +1,9 @@
 {
     "main": {
         "token": "go to https://discord.com/developers/applications/ to get your token",
-        "presence_name": "",
-        "presence_type": "",
-        "presence_status": ""
+        "presence_name": "the scums",
+        "presence_type": "WATCHING",
+        "presence_status": "idle"
     },
     
     "no_ping": {
