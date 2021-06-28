@@ -1,6 +1,6 @@
 {
     "main": {
-        "token": "go to https://discord.com/developers/applications/ to get your token"
+        "token": "go to https://discord.com/developers/applications/ to get your token",
         "presence_name": "",
         "presence_type": "",
         "presence_status": ""
