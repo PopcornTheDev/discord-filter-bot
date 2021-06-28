@@ -1,10 +1,15 @@
 {
     "main": {
-    "token": "go to https://discord.com/developers/applications/ to get your token"
+        "token": "go to https://discord.com/developers/applications/ to get your token",
+        "presence_name": "",
+        "presence_type": "",
+        "presence_status": ""
     },
+    
     "no_ping": {
-    "user(s)id(s)": ["example: 336313093736890388"]
+        "user(s)id(s)": ["example: 336313093736890388"]
     },
+    
     "filter": {
         "disablediscordlinks": "must be true or false",
         "disabled_words": ["example1","example2", "example3", "example4"]
