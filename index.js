@@ -1,7 +1,15 @@
 const fs = require('fs');
-const Discord = require('discord.js');
+const { Client, Collection } = require('discord.js');
 const config = require('./config.json');
-const client = new Discord.Client();
+
+class Popcorn extends Client {
+    constructor(options = {}) {
+        super(options);
+        this.events = new Collection()
+    }
+}
+
+const client = new Popcorn()
 
 client.events = new Discord.Collection();
 
