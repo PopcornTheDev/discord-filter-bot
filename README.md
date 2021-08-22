@@ -1,3 +1,8 @@
+# Authors
+- Popcorn The Dev (author)
+- Hyperz (author)
+- anusO1 (de-bloat)
+
 # Requirements 
 - Must have [NodeJS](https://nodejs.org) installed
 

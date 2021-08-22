@@ -27,12 +27,10 @@ exports.run = async (client, message) => {
                     }, 10000);
                 });
                 message.author.send(help).catch();
-
             }
         });
     }
     if (config['no ping'].enabled === true) {
-
         const help = config['no ping']['user ids(if enabled)']
         help.forEach(eachWord => {
             if (message.content.toLowerCase().search(eachWord.toLowerCase()) >= 0) {
