@@ -33,7 +33,7 @@ exports.run = async (client, message) => {
     }
     if (config['no_ping'].enabled === true) {
 
-        const help = config['no ping']['user ids(if enabled)']
+        const help = config['no_ping']['user(s)id(s)']
         help.forEach(eachWord => {
             if (message.content.toLowerCase().search(eachWord.toLowerCase()) >= 0) {
                 const help = new Discord.MessageEmbed()
