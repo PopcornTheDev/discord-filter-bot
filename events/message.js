@@ -31,7 +31,7 @@ exports.run = async (client, message) => {
             }
         });
     }
-    if (config['no ping'].enabled === true) {
+    if (config['no_ping'].enabled === true) {
 
         const help = config['no ping']['user ids(if enabled)']
         help.forEach(eachWord => {
