@@ -39,8 +39,8 @@ exports.run = async (client, message) => {
                 const help = new Discord.MessageEmbed()
                     .setDescription(`Please don't ping me!`)
                     .setTimestamp()
-                    .setImage(config['no ping']['image url'])
-                    .setFooter(config.embeds["footer message"] || "Server Filter", `${message.author.avatarURL()}`)
+                    .setImage(config['no_ping']['image_url'])
+                    .setFooter(config.embeds["footer_message"] || "Server Filter", `${message.author.avatarURL()}`)
                     .setColor(config.embeds.color);
                 message.channel.send(help).then((messagess) => {
                     setTimeout(function () {
